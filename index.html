@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Estágio+ | Oportunidades de Estágio</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-slate-50 text-slate-800">
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="h-16 flex items-center justify-between">
+
+                <!-- Logo -->
+                <a href="#inicio" class="flex items-center gap-2">
+                    <div class="logo-icon">
+                        <i data-lucide="graduation-cap"></i>
+                    </div>
+
+                    <span class="text-xl font-bold">
+                        Estágio<span class="text-indigo-600">+</span>
+                    </span>
+                </a>
+
+                <!-- Menu Desktop -->
+                <nav class="hidden md:flex items-center gap-8">
+
+                    <a href="#inicio" class="nav-link">
+                        Início
+                    </a>
+
+                    <a href="#cadastrar" class="nav-link">
+                        Cadastrar Vaga
+                    </a>
+
+                    <a href="#vagas" class="nav-link">
+                        Vagas Disponíveis
+                    </a>
+
+                    <a href="#sobre" class="nav-link">
+                        Sobre
+                    </a>
+
+                </nav>
+
+                <!-- Botão mobile -->
+                <button
+                    id="menuButton"
+                    class="md:hidden p-2 rounded-lg hover:bg-slate-100"
+                    aria-label="Abrir menu"
+                >
+                    <i data-lucide="menu"></i>
+                </button>
+
+            </div>
+
+            <!-- Menu Mobile -->
+            <nav id="mobileMenu" class="hidden md:hidden pb-4">
+
+                <div class="flex flex-col gap-2">
+
+                    <a href="#inicio" class="mobile-nav-link">
+                        Início
+                    </a>
+
+                    <a href="#cadastrar" class="mobile-nav-link">
+                        Cadastrar Vaga
+                    </a>
+
+                    <a href="#vagas" class="mobile-nav-link">
+                        Vagas Disponíveis
+                    </a>
+
+                    <a href="#sobre" class="mobile-nav-link">
+                        Sobre
+                    </a>
+
+                </div>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- =========================
+             HERO
+        ========================== -->
+        <section id="inicio" class="hero-section pt-32 pb-20">
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+
+                    <!-- Texto -->
+                    <div>
+
+                        <span class="hero-badge">
+                            <i data-lucide="sparkles" class="w-4 h-4"></i>
+                            Oportunidades para estudantes
+                        </span>
+
+                        <h1 class="mt-6 text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900">
+
+                            Encontre seu
+                            <span class="gradient-text">
+                                próximo estágio
+                            </span>
+
+                        </h1>
+
+                        <p class="mt-6 text-lg text-slate-600 max-w-xl leading-relaxed">
+                            Conectamos estudantes e empresas através de
+                            oportunidades de estágio em diversas áreas.
+                            Encontre uma oportunidade ou publique sua vaga.
+                        </p>
+
+                        <div class="mt-8 flex flex-col sm:flex-row gap-4">
+
+                            <a
+                                href="#cadastrar"
+                                class="primary-button"
+                            >
+                                <i data-lucide="plus-circle"></i>
+                                Cadastrar uma vaga
+                            </a>
+
+                            <a
+                                href="#vagas"
+                                class="secondary-button"
+                            >
+                                <i data-lucide="search"></i>
+                                Ver vagas disponíveis
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Ilustração -->
+                    <div class="hidden lg:flex justify-center">
+
+                        <div class="hero-illustration">
+
+                            <div class="illustration-circle"></div>
+
+                            <div class="illustration-card card-one">
+                                <i data-lucide="briefcase"></i>
+                                <div>
+                                    <strong>Nova oportunidade</strong>
+                                    <span>Desenvolvimento Web</span>
+                                </div>
+                            </div>
+
+                            <div class="illustration-card card-two">
+                                <i data-lucide="graduation-cap"></i>
+                                <div>
+                                    <strong>Para estudantes</strong>
+                                    <span>Comece sua carreira</span>
+                                </div>
+                            </div>
+
+                            <div class="illustration-main">
+                                <i data-lucide="rocket"></i>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ESTATÍSTICAS
+        ========================== -->
+        <section class="py-12 bg-white border-y border-slate-200">
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+                <div class="grid sm:grid-cols-3 gap-6">
+
+                    <!-- Vagas -->
+                    <div class="stat-card">
+
+                        <div class="stat-icon bg-indigo-100 text-indigo-600">
+                            <i data-lucide="briefcase"></i>
+                        </div>
+
+                        <div>
+                            <p id="totalVagas" class="text-3xl font-bold text-slate-900">
+                                0
+                            </p>
+
+                            <p class="text-sm text-slate-500">
+                                Vagas disponíveis
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Empresas -->
+                    <div class="stat-card">
+
+                        <div class="stat-icon bg-purple-100 text-purple-600">
+                            <i data-lucide="building-2"></i>
+                        </div>
+
+                        <div>
+                            <p id="totalEmpresas" class="text-3xl font-bold text-slate-900">
+                                0
+                            </p>
+
+                            <p class="text-sm text-slate-500">
+                                Empresas cadastradas
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Áreas -->
+                    <div class="stat-card">
+
+                        <div class="stat-icon bg-blue-100 text-blue-600">
+                            <i data-lucide="layers"></i>
+                        </div>
+
+                        <div>
+                            <p id="totalAreas" class="text-3xl font-bold text-slate-900">
+                                0
+                            </p>
+
+                            <p class="text-sm text-slate-500">
+                                Áreas de atuação
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             FORMULÁRIO
+        ========================== -->
+        <section id="cadastrar" class="py-20">
+
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+                <div class="text-center mb-10">
+
+                    <span class="section-label">
+                        Para empresas
+                    </span>
+
+                    <h2 class="section-title">
+                        Cadastre uma oportunidade de estágio
+                    </h2>
+
+                    <p class="section-description">
+                        Divulgue sua vaga e encontre estudantes interessados
+                        em fazer parte da sua equipe.
+                    </p>
+
+                </div>
+
+
+                <div class="form-container">
+
+                    <form id="vagaForm">
+
+                        <!-- Informações principais -->
+                        <div class="mb-8">
+
+                            <h3 class="form-title">
+                                <i data-lucide="file-text"></i>
+                                Informações da vaga
+                            </h3>
+
+                            <div class="grid md:grid-cols-2 gap-5 mt-6">
+
+                                <!-- Empresa -->
+                                <div class="form-group">
+
+                                    <label for="empresa">
+                                        Nome da empresa *
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="empresa"
+                                        name="empresa"
+                                        placeholder="Ex.: Tech Solutions"
+                                        required
+                                    >
+
+                                </div>
+
+
+                                <!-- Título -->
+                                <div class="form-group">
+
+                                    <label for="titulo">
+                                        Título da vaga *
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="titulo"
+                                        name="titulo"
+                                        placeholder="Ex.: Estagiário de Desenvolvimento"
+                                        required
+                                    >
+
+                                </div>
+
+
+                                <!-- Área -->
+                                <div class="form-group">
+
+                                    <label for="area">
+                                        Área de atuação *
+                                    </label>
+
+                                    <select id="area" name="area" required>
+
+                                        <option value="">
+                                            Selecione uma área
+                                        </option>
+
+                                        <option value="Tecnologia">
+                                            Tecnologia
+                                        </option>
+
+                                        <option value="Administração">
+                                            Administração
+                                        </option>
+
+                                        <option value="Design">
+                                            Design
+                                        </option>
+
+                                        <option value="Marketing">
+                                            Marketing
+                                        </option>
+
+                                        <option value="Direito">
+                                            Direito
+                                        </option>
+
+                                        <option value="Engenharia">
+                                            Engenharia
+                                        </option>
+
+                                        <option value="Educação">
+                                            Educação
+                                        </option>
+
+                                        <option value="Recursos Humanos">
+                                            Recursos Humanos
+                                        </option>
+
+                                        <option value="Outra">
+                                            Outra
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+
+                                <!-- Localização -->
+                                <div class="form-group">
+
+                                    <label for="localizacao">
+                                        Localização *
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="localizacao"
+                                        name="localizacao"
+                                        placeholder="Ex.: Fortaleza - CE"
+                                        required
+                                    >
+
+                                </div>
+
+
+                                <!-- Modalidade -->
+                                <div class="form-group">
+
+                                    <label for="modalidade">
+                                        Modalidade *
+                                    </label>
+
+                                    <select id="modalidade" name="modalidade" required>
+
+                                        <option value="">
+                                            Selecione
+                                        </option>
+
+                                        <option value="Presencial">
+                                            Presencial
+                                        </option>
+
+                                        <option value="Híbrido">
+                                            Híbrido
+                                        </option>
+
+                                        <option value="Remoto">
+                                            Remoto
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+
+                                <!-- Bolsa -->
+                                <div class="form-group">
+
+                                    <label for="bolsa">
+                                        Bolsa-auxílio *
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="bolsa"
+                                        name="bolsa"
+                                        placeholder="Ex.: R$ 1.200"
+                                        required
+                                    >
+
+                                </div>
+
+
+                                <!-- Carga horária -->
+                                <div class="form-group">
+
+                                    <label for="cargaHoraria">
+                                        Carga horária *
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="cargaHoraria"
+                                        name="cargaHoraria"
+                                        placeholder="Ex.: 30 horas semanais"
+                                        required
+                                    >
+
+                                </div>
+
+
+                                <!-- E-mail -->
+                                <div class="form-group">
+
+                                    <label for="email">
+                                        E-mail para candidatura *
+                                    </label>
+
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        name="email"
+                                        placeholder="vagas@empresa.com"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Descrição -->
+                        <div class="form-group mb-5">
+
+                            <label for="descricao">
+                                Descrição da vaga *
+                            </label>
+
+                            <textarea
+                                id="descricao"
+                                name="descricao"
+                                rows="4"
+                                placeholder="Descreva as principais atividades da vaga..."
+                                required
+                            ></textarea>
+
+                        </div>
+
+
+                        <!-- Requisitos -->
+                        <div class="form-group mb-6">
+
+                            <label for="requisitos">
+                                Requisitos *
+                            </label>
+
+                            <textarea
+                                id="requisitos"
+                                name="requisitos"
+                                rows="4"
+                                placeholder="Informe os requisitos necessários para a vaga..."
+                                required
+                            ></textarea>
+
+                        </div>
+
+
+                        <!-- Mensagem -->
+                        <div
+                            id="formMessage"
+                            class="hidden mb-5"
+                        ></div>
+
+
+                        <!-- Botão -->
+                        <button
+                            type="submit"
+                            class="submit-button"
+                        >
+                            <i data-lucide="send"></i>
+                            Publicar vaga
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             VAGAS
+        ========================== -->
+        <section id="vagas" class="py-20 bg-white">
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+                <div class="text-center mb-10">
+
+                    <span class="section-label">
+                        Oportunidades
+                    </span>
+
+                    <h2 class="section-title">
+                        Vagas de estágio disponíveis
+                    </h2>
+
+                    <p class="section-description">
+                        Confira as oportunidades disponíveis e encontre
+                        uma vaga para começar sua carreira.
+                    </p>
+
+                </div>
+
+
+                <!-- Tabela -->
+                <div class="table-container">
+
+                    <div class="overflow-x-auto">
+
+                        <table class="w-full">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>Empresa</th>
+                                    <th>Vaga</th>
+                                    <th>Área</th>
+                                    <th>Localização</th>
+                                    <th>Modalidade</th>
+                                    <th>Bolsa</th>
+                                    <th>Ação</th>
+
+                                </tr>
+
+                            </thead>
+
+                            <tbody id="vagasTableBody">
+                                <!-- Preenchido pelo JavaScript -->
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+
+                    <!-- Estado vazio -->
+                    <div
+                        id="emptyState"
+                        class="hidden text-center py-16"
+                    >
+
+                        <div class="empty-icon">
+                            <i data-lucide="briefcase-business"></i>
+                        </div>
+
+                        <h3 class="text-lg font-semibold text-slate-800">
+                            Nenhuma vaga encontrada
+                        </h3>
+
+                        <p class="text-sm text-slate-500 mt-2">
+                            Cadastre uma nova oportunidade para ela aparecer aqui.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             SOBRE
+        ========================== -->
+        <section id="sobre" class="py-20 bg-slate-50">
+
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+
+                    <div>
+
+                        <span class="section-label">
+                            Sobre o Estágio+
+                        </span>
+
+                        <h2 class="section-title text-left">
+                            Conectando talentos a oportunidades
+                        </h2>
+
+                        <p class="mt-5 text-slate-600 leading-relaxed">
+                            O Estágio+ foi criado para facilitar a conexão
+                            entre estudantes que estão buscando sua primeira
+                            experiência profissional e empresas que desejam
+                            encontrar novos talentos.
+                        </p>
+
+                        <p class="mt-4 text-slate-600 leading-relaxed">
+                            Nossa plataforma permite que empresas divulguem
+                            suas oportunidades de forma simples, rápida e
+                            organizada.
+                        </p>
+
+                    </div>
+
+
+                    <div class="grid grid-cols-2 gap-4">
+
+                        <div class="about-card">
+                            <i data-lucide="users"></i>
+                            <h3>
+                                Para estudantes
+                            </h3>
+                            <p>
+                                Encontre oportunidades para desenvolver sua carreira.
+                            </p>
+                        </div>
+
+                        <div class="about-card">
+                            <i data-lucide="building"></i>
+                            <h3>
+                                Para empresas
+                            </h3>
+                            <p>
+                                Divulgue vagas e encontre novos talentos.
+                            </p>
+                        </div>
+
+                        <div class="about-card">
+                            <i data-lucide="zap"></i>
+                            <h3>
+                                Simples
+                            </h3>
+                            <p>
+                                Cadastre e divulgue oportunidades rapidamente.
+                            </p>
+                        </div>
+
+                        <div class="about-card">
+                            <i data-lucide="shield-check"></i>
+                            <h3>
+                                Organizado
+                            </h3>
+                            <p>
+                                Consulte as oportunidades em um só lugar.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         MODAL DE CANDIDATURA
+    ========================== -->
+    <div
+        id="candidateModal"
+        class="modal hidden"
+    >
+
+        <div
+            class="modal-overlay"
+            id="modalOverlay"
+        ></div>
+
+
+        <div class="modal-content">
+
+            <button
+                id="closeModal"
+                class="modal-close"
+                aria-label="Fechar"
+            >
+                <i data-lucide="x"></i>
+            </button>
+
+
+            <div class="mb-6">
+
+                <div class="modal-icon">
+                    <i data-lucide="send"></i>
+                </div>
+
+                <h2 class="text-2xl font-bold text-slate-900 mt-4">
+                    Candidatar-se
+                </h2>
+
+                <p
+                    id="modalJobInfo"
+                    class="text-slate-500 text-sm mt-1"
+                ></p>
+
+            </div>
+
+
+            <form id="candidateForm">
+
+                <div class="form-group mb-4">
+
+                    <label for="candidateName">
+                        Seu nome *
+                    </label>
+
+                    <input
+                        type="text"
+                        id="candidateName"
+                        required
+                        placeholder="Digite seu nome completo"
+                    >
+
+                </div>
+
+
+                <div class="form-group mb-4">
+
+                    <label for="candidateEmail">
+                        Seu e-mail *
+                    </label>
+
+                    <input
+                        type="email"
+                        id="candidateEmail"
+                        required
+                        placeholder="seu@email.com"
+                    >
+
+                </div>
+
+
+                <div class="form-group mb-6">
+
+                    <label for="candidatePhone">
+                        Telefone
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="candidatePhone"
+                        placeholder="(85) 99999-9999"
+                    >
+
+                </div>
+
+
+                <div
+                    id="candidateMessage"
+                    class="hidden mb-4"
+                ></div>
+
+
+                <button
+                    type="submit"
+                    class="submit-button"
+                >
+                    <i data-lucide="send"></i>
+                    Enviar candidatura
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+    <footer class="bg-slate-900 text-white py-10">
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="flex flex-col md:flex-row justify-between gap-6">
+
+                <div>
+
+                    <div class="flex items-center gap-2">
+
+                        <div class="logo-icon">
+                            <i data-lucide="graduation-cap"></i>
+                        </div>
+
+                        <span class="text-xl font-bold">
+                            Estágio<span class="text-indigo-400">+</span>
+                        </span>
+
+                    </div>
+
+                    <p class="text-slate-400 text-sm mt-3 max-w-sm">
+                        Conectando estudantes e empresas para construir
+                        novas oportunidades profissionais.
+                    </p>
+
+                </div>
+
+
+                <div class="text-sm text-slate-400 md:text-right">
+
+                    <p>
+                        © 2026 Estágio+. Todos os direitos reservados.
+                    </p>
+
+                    <p class="mt-1">
+                        Projeto desenvolvido com HTML, CSS, Tailwind e JavaScript.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
